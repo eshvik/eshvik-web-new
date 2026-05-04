@@ -20,4 +20,4 @@ if (error || !data) {
 return NextResponse.json({ error: "Not found" }, { status: 404 });
 }
 
-return NextResponse.json(data); 
+return NextResponse.json(data);
