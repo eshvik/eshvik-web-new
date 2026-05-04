@@ -1,19 +1,3 @@
-import { supabase } from "@/lib/supabase";
-
-export default async function SitePage({ params }: any) {
-  const { site } = params;
-
-  const { data } = await supabase
-    .from("sites")
-    .select("*")
-    .eq("name", site)
-    .single();
-
-  if (!data) {
-    return <h1>❌ Site not found</h1>;
-  }
-
-  return (
-    <div dangerouslySetInnerHTML={{ __html: data.content }} />
-  );
+export default function Test({ params }: any) {
+  return <h1>SUBDOMAIN WORKING: {params.site}</h1>;
 }
