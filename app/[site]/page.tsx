@@ -1,5 +1,4 @@
-import { supabase } from "@/lib/supabase";
-
+import { supabase } from "../../lib/supabase";
 export default async function SitePage({ params }: any) {
   const { site } = params;
 
